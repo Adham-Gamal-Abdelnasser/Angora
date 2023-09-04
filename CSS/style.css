@@ -1,0 +1,311 @@
+/* ========== S T A N D A R D S ========== */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --hovered-color: #f25454;
+    --base: #fff;
+    --font-grayed: #999;
+    --bg-grey: #fafafa;
+}
+.title {
+    position:relative;
+}
+.title h4 {
+    font-size: 3rem;
+    transform: scale(1.5);
+}
+.title h5 {
+    top: 20%;
+    font-weight: 800;
+    font-size: 2.3rem;
+    position:relative;
+}
+.title h5::after {
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    height: 2px;
+    width: 50px;
+    background-color: #1a1a1a;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+.title:hover h5::after {
+    width: 100px;
+}
+article {
+    left: 25%;
+    color: var(--font-grayed);
+    font-size: 18px;
+}
+::placeholder {
+    color: var(--font-grayed) !important;
+}
+input:focus , textarea:focus :not(#home button , #home button span) {
+    box-shadow: 0 0 0 0.15rem var(--hovered-color) !important;
+}
+p{
+    color: var(--font-grayed);
+}
+/* ========== H E A D E R ========== */
+#home nav ul li a {
+    transition: 0.1s;
+}
+#home nav ul li:hover:not(:last-child) a ,
+#about nav ul li:hover:not(:last-child) a ,
+#home nav ul li .nav-icons a:hover ,
+#about nav ul li .nav-icons a:hover{
+    color: var(--hovered-color) !important;
+}
+#home #carouselExampleFade .carousel-item .carousel-caption {
+    top: 35%;
+}
+#home #carouselExampleFade .carousel-item .carousel-caption p {
+    font-weight: 800;
+    font-size: 4rem;
+}
+/*  ========== A B O U T ==========  */
+#about nav .navbar-brand {
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+#about .progress-bar {
+    background-color: var(--hovered-color);
+}
+#about article {
+    color: var(--font-grayed);
+}
+#about .container .row .bar .progres-80 {
+
+    animation: appear-80 2s linear forwards;
+}
+@keyframes appear-80 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+#about .container .row .bar .progres-95 {
+
+    animation: appear-95 2s linear forwards;
+}
+@keyframes appear-95 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 95%;
+    }
+}
+#about .container .row .bar .progres-85 {
+
+    animation: appear-85 2s linear forwards;
+}
+@keyframes appear-85 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 85%;
+    }
+}
+#about .container .row .bar .progres-70 {
+    animation: appear-70 2s linear forwards;
+}
+@keyframes appear-70 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
+    }
+}
+#about .container .row .bar .eighty{
+    left: 78%;
+    opacity: 0;
+    animation: appear-eighty 0.3s linear 2s forwards;
+}
+@keyframes appear-eighty {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#about .container .row .bar .ninty-five{
+    left: 93%;
+    opacity: 0;
+    animation: appear-ninty-five 0.3s linear 2s forwards;
+}
+@keyframes appear-ninty-five {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#about .container .row .bar .eighty-five{
+    left: 83%;
+    opacity: 0;
+    animation: appear-eighty-five 0.3s linear 2s forwards;
+}
+@keyframes appear-eighty-five {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#about .container .row .bar .seventy {
+    left: 68%;
+    opacity: 0;
+    animation: appear-seventy 0.3s linear 2s forwards;
+}
+@keyframes appear-seventy {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* ========== T E A M ========== */
+#team .container {
+    margin-bottom: 50px;
+}
+#team .container .row .col-contain .col-layer {
+    background-color:  rgb(242,84,84);
+    opacity: 0;
+    z-index: 5;
+}
+#team .container .row .col-contain .col-layer ,
+#team .container .row .col-contain .member-image img ,
+#team  .container .row h2  {
+    transition:  0.4s;
+}
+#team .container .row .col-contain:hover .col-layer {
+    opacity: 0.85;
+}
+#team .container .row .col-contain:hover .member-image img {
+    transform: scale(1.2);
+} 
+#team .container .row div:hover h2 {
+    color: var(--hovered-color);
+}
+
+#team  .container .row h2 {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#team .ideas p {
+    font-size: 26px;
+    font-weight: 400;
+}
+#team .ideas button {
+    background-color: var(--hovered-color);
+    font-weight: 500;
+}
+/* ========== S E R V I C E S ========== */
+#service {
+    background-color: var(--bg-grey);
+}
+#service .container .row h2 {
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.6s;
+}
+#service .container .row h2 i {
+    color: var(--hovered-color);
+}
+#service .container .row h2:hover {
+    color: var(--hovered-color);
+}
+/* ========== C L I E N T S ========== */
+
+
+.carousel-indicators [data-bs-target] {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-indent: 0;
+}
+/* ========== G E T I N T O U C H ========== */
+#contact {
+    background-color: var(--bg-grey);
+}
+#contact form button {
+    background-color: var(--hovered-color);
+}
+#contact form input ,
+#contact form textarea {
+    box-shadow: 0 0 0 0.005rem var(--font-grayed);
+}
+#contact .container .row div h4 i {
+    color: var(--hovered-color);
+}
+#contact .container .row div h4 {
+    transition: 0.5s;
+}
+#contact .container .row div h4:hover {
+    color: var(--hovered-color);
+}
+/* ========== F A Q ========== */
+#faq {
+    background: #222;
+    background-image: url("https://angora-7rnb.onrender.com/images/footer/dotted-map.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    padding-top: 50px;
+}
+#faq > span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: -60px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: var(--hovered-color);
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+#faq > span:hover {
+    opacity: 1;
+}
+.title-img {
+    width: 70px;
+    height: 70px;
+
+}
+#faq a ,
+#copy .copy-icons a {
+    transition: 0.3s;
+}
+#faq a:hover ,
+#copy .copy-icons a:hover {
+    color: var(--hovered-color) !important;
+}
+#faq .container .row  .btn:hover {
+    color: var(--hovered-color) ;
+    border-color: var(--hovered-color) !important;
+}
+/* ========== C O P Y R I G H T ========== */
+#copy {
+    background-color: #1a1a1a;
+}
+
